@@ -1,0 +1,292 @@
+/* GLOBAL AYARLAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f6f9;
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER & LOGO */
+header {
+    background: #fff;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+   
+}
+
+.logo-img {
+    transition: transform 0.3s;
+    
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* NAVİGASYON (MENÜ) - MAVİ/KIRMIZI TEMA */
+#Menu {
+    background: #1a237e; /* Koyu Lacivert */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 4px solid #e30613; /* Habertürk Kırmızısı */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+nav a i {
+    margin-right: 5px;
+}
+
+nav a:hover {
+    color: #ffeb3b; /* Üzerine gelince sarı vurgu */
+}
+
+/* ANASAYFA BANNER (HERO SECTION) */
+#Anasayfa {
+    height: 60vh;
+    background: url('../img/banner.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+#black {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#İcerik {
+    position: relative;
+    z-index: 1;
+}
+
+#İcerik h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+#İcerik hr {
+    margin: 10px auto;
+    border: 2px solid #e30613;
+}
+
+/* HABER KARTLARI (GRID SİSTEMİ) */
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: #e30613;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding-bottom: 50px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h5 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a237e;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* HAKKIMIZDA */
+#Hakkımızda {
+    background: #fff;
+    padding: 60px 0;
+}
+
+/* İLETİŞİM FORMU */
+#iletisim {
+    padding: 60px 0;
+    background: #f4f6f9;
+}
+
+#iletisimopak {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+#formgroup {
+    flex: 2;
+}
+
+#infoform {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+textarea.form-control {
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background: #e30613;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #1a237e;
+}
+
+#adres {
+    flex: 1;
+    background: #1a237e;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#adres h4 { margin-bottom: 20px; color: #ffeb3b; }
+#adres p { margin-bottom: 15px; font-size: 14px; }
+#adres i { margin-right: 10px; color: #ffeb3b; }
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#socialfooter a {
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+#socialfooter a:hover { color: #e30613; }
+
+.back-to-top {
+    color: white;
+    font-size: 24px;
+}
+
+/* RESPONSIVE (MOBİL UYUMLULUK) */
+@media (max-width: 768px) {
+    #infoform {
+        grid-template-columns: 1fr;
+    }
+    
+    #iletisimopak {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    #İcerik h2 {
+        font-size: 30px;
+    }
+    
+    nav a {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
